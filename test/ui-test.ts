@@ -26,7 +26,7 @@ hosts.forEach(function (host) {
 
             // Call startDebugging to start dev-server and sideload
             const devServerCmd = `npm run dev-server -- --config ./test/webpack.config.js `;
-            const devServerPort = parseNumber(process.env.npm_package_config_dev_server_port || 3000);
+            const devServerPort = parseNumber(process.env.npm_package_config_dev_server_port || 5000);
             await startDebugging(manifestPath, AppType.Desktop, toOfficeApp(host), undefined, undefined, devServerCmd, devServerPort);
         }),
             describe(`Get test results for ${host} taskpane project`, function () {

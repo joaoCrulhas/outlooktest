@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const fs = require("fs");
 const webpack = require("webpack");
 
-const urlDev="https://localhost:3000/";
+const urlDev="https://localhost:5000/";
 const urlProd="https://www.contoso.com/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 
 module.exports = async (env, options) => {
@@ -83,7 +83,7 @@ module.exports = async (env, options) => {
         "Access-Control-Allow-Origin": "*"
       },      
       https: (options.https !== undefined) ? options.https : await devCerts.getHttpsServerOptions(),
-      port: process.env.npm_package_config_dev_server_port || 3000
+      port: process.env.npm_package_config_dev_server_port || 5000
     }
   };
 
